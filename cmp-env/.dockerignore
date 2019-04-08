@@ -1,0 +1,17 @@
+.DS_Store
+node_modules
+npm-debug.log
+*.swp
+.idea
+dump.rdb
+config.js
+config.js.qc
+fabfile.py*
+config.js.pro
+.git
+tests
+client/build
+client/src
+client/.cache
+config
+pack.sh

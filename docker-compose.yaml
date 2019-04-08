@@ -1,0 +1,19 @@
+version: "2.0"
+
+services:
+  memcache:
+    image: memcached
+    container_name: cmp-memcache
+    ports:
+      - 11211:11211
+  cmp:
+    build: ./cmp-env
+    image: cmp-python
+    container_name: cmp-python
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - 8000:8000
+    depends_on:
+      - memcache
+    volumes:
+      - ./cmp-env/pitrix-cmp-portal/:/pitrix/lib/pitrix-cmp-portal/"
