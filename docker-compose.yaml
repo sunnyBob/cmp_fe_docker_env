@@ -16,4 +16,4 @@ services:
     depends_on:
       - memcache
     volumes:
-      - ./cmp-env/pitrix-cmp-portal/:/pitrix/lib/pitrix-cmp-portal/"
+      - "./cmp-env/pitrix-cmp-portal/:/pitrix/lib/pitrix-cmp-portal/"
